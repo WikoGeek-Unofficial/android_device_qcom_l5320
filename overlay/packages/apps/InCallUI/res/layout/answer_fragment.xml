@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!-- TODO(klp): move out to separate file -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dc="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inCallTouchUi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                	android:layout_height="match_parent">
+<com.android.incallui.GlowPadWrapper
+        android:id="@+id/glow_pad_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/glowpad_background_color"
+        android:visibility="gone"
+
+        dc:targetDrawables="@array/incoming_call_widget_audio_with_sms_targets"
+        dc:targetDescriptions="@array/incoming_call_widget_audio_with_sms_target_descriptions"
+        dc:directionDescriptions="@array/incoming_call_widget_audio_with_sms_direction_descriptions"
+        dc:handleDrawable="@drawable/ic_incall_audio_handle"
+        dc:outerRingDrawable="@drawable/ic_lockscreen_outerring"
+        dc:outerRadius="@dimen/glowpadview_target_placement_radius"
+        dc:innerRadius="@dimen/glowpadview_inner_radius"
+        dc:snapMargin="@dimen/glowpadview_snap_margin"
+        dc:feedbackCount="1"
+        dc:vibrationDuration="20"
+        dc:glowRadius="@dimen/glowpadview_glow_radius"
+        dc:pointDrawable="@drawable/ic_lockscreen_glowdot"
+        dc:allowScaling="true" />
+<!-- BEGIN  TINNO_SUBDISPLAYINFO_APP , SUB CALL SCREEN  -->    
+     <LinearLayout
+            android:id="@+id/incomming_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:background="@drawable/background"
+             android:orientation="vertical"
+             android:paddingTop="45dip"
+             android:gravity="center"
+             android:visibility="gone">
+
+        <TextView android:id="@+id/incomming_name"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+                        android:paddingTop="95dip"			
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="@color/incall_call_banner_text_color"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:visibility="gone"/>
+             
+	 <com.android.incallui.GlowPadWrapper
+			android:id="@+id/incomingCallWidgetsub"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"		
+			android:focusable="true"
+			android:paddingTop="110dip"
+			android:layout_centerHorizontal="true"
+			android:visibility="gone"
+			dc:targetDrawables="@array/incoming_call_widget_3way_targets_sub"
+			dc:targetDescriptions="@array/incoming_call_widget_2way_target_descriptions"
+			dc:directionDescriptions="@array/incoming_call_widget_2way_direction_descriptions"
+			dc:handleDrawable="@drawable/ic_in_call_touch_sub_handle"
+			dc:outerRadius="55dip"
+			dc:innerRadius="10dip"
+			dc:outerRingDrawable="@drawable/ic_lockscreen_sub_outerring"
+			dc:snapMargin="1dip"
+			dc:feedbackCount="1"
+			dc:vibrationDuration="20"
+			dc:glowRadius="25dip"
+			dc:pointDrawable="@drawable/ic_lockscreen_glowdot"
+	                dc:chevronDrawables="@array/incoming_call_chevron_3way_targets"
+			dc:allowScaling="true"/>
+			
+	</LinearLayout>	
+	
+  	<!-- END  TINNO_SUBDISPLAYINFO_APP , SUB CALL SCREEN-->
+    </RelativeLayout>
+</FrameLayout>

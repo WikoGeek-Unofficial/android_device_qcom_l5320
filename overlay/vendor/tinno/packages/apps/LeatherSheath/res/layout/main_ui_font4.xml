@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:id="@+id/main_ui_font4"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+	<LinearLayout
+        android:id="@+id/linear_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<ImageView
+			android:id="@+id/phone_call"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/phone_call_layout_marginTop"
+			android:layout_marginLeft="@dimen/phone_call_layout_marginLeft"
+			android:src="@drawable/call"/>
+		<ImageView
+			android:id="@+id/call_missed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/call_missed_layout_marginTop"
+			android:layout_marginLeft="@dimen/call_missed_layout_marginLeft"
+			android:visibility="gone"/>
+	</LinearLayout>
+
+	<AbsoluteLayout
+        android:id="@+id/linear_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		<!--****** AM/PM display ******-->
+		<TextView
+			android:id="@+id/am_pm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="77dip"
+			android:layout_y="@dimen/am_pm_layout_y"
+			android:ellipsize="none"
+			android:singleLine="true"
+			android:textSize="@dimen/am_pm_text_size"
+			android:text="@string/am_pm"/>
+		<!--****** Time display ******-->
+		<TextView
+			android:id="@+id/time_display"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_x="74dip"
+			android:layout_y="44dip"
+			android:ellipsize="none"
+			android:singleLine="true"
+			android:textSize="@dimen/time_display_text_size"/>
+		<!--****** Date/Week display ******-->
+		<TextView
+	    	android:id="@+id/dateDisplay"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="77dip"
+			android:layout_y="@dimen/dateDisplay_layout_y"
+			android:ellipsize="none"
+			android:singleLine="true"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="@dimen/dateDisplay_text_size"/>
+		<TextView
+			android:id="@+id/weekDisplay"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="124dip"
+			android:layout_y="@dimen/weekDisplay_layout_y"
+			android:ellipsize="none"
+			android:singleLine="true"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="@dimen/weekDisplay_text_size"/>
+		<!--****** Divide line display ******-->
+		<ImageView
+			android:id="@+id/divide_line"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/divide_line_layout_height"
+			android:layout_x="@dimen/divide_line_layout_x"
+			android:layout_y="@dimen/divide_line_layout_y"
+			android:src="@drawable/divide_line"/>
+		<!--****** Weather display ******-->
+        <ImageView
+			android:id="@+id/weather"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="@dimen/weather_layout_x"
+			android:layout_y="@dimen/weather_layout_y"/>
+        <TextView
+			android:id="@+id/tempc_value"
+			android:layout_width="@dimen/tempc_value_layout_width"
+			android:layout_height="wrap_content"
+			android:layout_x="@dimen/tempc_value_layout_x"
+			android:layout_y="@dimen/tempc_value_layout_y"
+			android:ellipsize="end"
+			android:singleLine="true"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textSize="@dimen/tempc_value_text_size"/>
+		<!--****** Message ICON display ******-->
+		<ImageView
+			android:id="@+id/phone_message"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="@dimen/phone_message_layout_x"
+			android:layout_y="@dimen/phone_message_layout_y"
+			android:src="@drawable/message"/>
+		<ImageView
+			android:id="@+id/sms_unread"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_x="@dimen/sms_unread_layout_x"
+			android:layout_y="@dimen/sms_unread_layout_y"
+			android:visibility="gone"/>
+	</AbsoluteLayout>
+
+	<LinearLayout
+        android:id="@+id/linear_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<ImageView
+			android:id="@+id/phone_music"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/phone_music_layout_marginTop"
+			android:layout_marginLeft="@dimen/phone_music_layout_marginLeft"
+			android:src="@drawable/music"/>
+	</LinearLayout>
+</LinearLayout>
